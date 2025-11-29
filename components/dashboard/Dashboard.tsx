@@ -113,7 +113,7 @@ const Dashboard = () => {
       const userId = 1; // Replace with actual user ID from auth context
 
       // Fetch dashboard stats
-      const statsResponse = await fetch(`http://localhost:7005/course/dashboard/stats?userId=${userId}`);
+      const statsResponse = await fetch(`https://learningwebsitebackend.vercel.app/course/dashboard/stats?userId=${userId}`);
       const statsData = await statsResponse.json();
 
       if (statsData.status === 'success') {
@@ -125,7 +125,7 @@ const Dashboard = () => {
         } else {
           // Otherwise fetch course details separately
           const courseIds = [1, 2]; // Default course IDs - adjust as needed
-          const coursesResponse = await fetch('http://localhost:7005/course/courses/details', {
+          const coursesResponse = await fetch('https://learningwebsitebackend.vercel.app/course/courses/details', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

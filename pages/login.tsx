@@ -27,7 +27,7 @@ const Login = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:7005/api/login", {
+      const response = await fetch("https://learningwebsitebackend.vercel.app/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
